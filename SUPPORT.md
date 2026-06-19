@@ -45,6 +45,7 @@ A red warning banner appears at the top of the app when this is detected. This u
 
 - Connect via wired USB instead of Bluetooth. Most controllers behave differently over USB and often skip authentication entirely.
 - Switch the controller's firmware mode to **Nintendo Switch**, **PC**, or **XInput** if your controller has that option. Sony-licensed boards in PS5 / PS4 modes will keep failing on iOS; non-Sony modes work fine.
+- Use a **MAYFLASH Magic NS2 adapter set to macOS Mode.** This is the most reliable fix for controllers iOS won't recognize natively. The adapter re-presents the controller in a form iOS accepts, so its inputs surface in the app. Confirmed working with **Qanba** controllers and controllers running through a **Brook adapter**.
 
 ### What controllers are supported?
 
@@ -58,6 +59,8 @@ Anything iOS recognizes through Apple's GameController framework as an Extended 
 - Most arcade sticks and leverless controllers in **Switch mode** or **XInput mode**
 
 Controllers that depend on Sony's PS5 authentication chip (Victrix Pro BFG, Hori Fighting Edge PS5, Brook FGC adapters, etc.) generally don't work on iOS because iOS doesn't speak Sony's auth protocol. Use those over wired USB or switch them to a non-PS5 mode if possible.
+
+For controllers that still won't connect — including **Qanba** boards and pads on a **Brook adapter** — a **MAYFLASH Magic NS2 set to macOS Mode** is the confirmed workaround: it re-presents the controller in a form iOS accepts. See "My controller keeps disconnecting and reconnecting" above.
 
 ### My fightstick / leverless board pairs as a keyboard, not a controller
 
