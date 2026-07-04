@@ -62,6 +62,28 @@ That's fine. When a keyboard is connected and no gamepad is, the buttons panel s
 
 Results show in milliseconds and in **frames at 60 fps**, the FGC standard, so the number means the same thing across devices. On ProMotion screens (iPad Pro, iPhone 13 Pro and later) input sampling runs up to 120 Hz. Good for A/B-ing two boards: if one adds 3 frames of latency, you'll see it.
 
+## Using the Combo Editor
+
+Combo Practice plays back a combo as a scrolling note highway and grades your timing against it. The **Combo Editor** is where you build or tune one. Open it from the Combo Practice screen with **Combo Editor**, or from a recording's menu.
+
+**Record a combo.** Tap **REC**, then play the inputs on your controller. Each press drops a note on the timeline at the frame it landed. Tap **REC** again to stop. Prefer to build it by hand? The generated combos in the library are a good starting point to copy and edit.
+
+**Read the timeline.** Time runs top to bottom; the yellow line is the playhead. Each note shows its input glyph (directions as arrows, buttons as your controller's face glyphs). The header reads out how many inputs and frames the combo is.
+
+**Select a note.** Tap a note to select it — or step through notes with the **◀ ▶** buttons on your controller. The **Inspector** below fills in with that note's frame, hold length, and timing window.
+
+**Select several at once.** Drag across empty timeline space to draw a selection box (a marquee) around a group of notes. Everything inside is selected together.
+
+**Deselect.** Tap any empty part of the timeline to clear the selection.
+
+**Move a note.** Drag a selected note up or down to shift it earlier or later; drag a whole selected group to move them together. For frame-exact nudges, use **−1f / +1f** in the Inspector.
+
+**Set the timing window.** A note's window is how many frames **early** or **late** a press still counts as a hit. Loosen it for a lenient link, tighten it for a strict one — or leave **USE GLOBAL** on to follow the app-wide leniency.
+
+**Trim and loop.** After a recording, drag the amber handles to trim off dead space at the ends. Mark a **loop** region to practice or re-record just one link instead of the whole combo.
+
+**Save.** Tap **SAVE** to keep your changes. Saved combos show up in Combo Practice and in the library, ready to grade against.
+
 ## Privacy
 
 Controller Tester collects nothing. No analytics, no telemetry, no remote calls. Input data lives in memory only while the app is open, then it's gone. Full [Privacy Policy](./PRIVACY_POLICY).
