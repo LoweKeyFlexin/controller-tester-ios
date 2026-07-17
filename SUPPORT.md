@@ -84,6 +84,27 @@ Combo Practice plays back a combo as a scrolling note highway and grades your ti
 
 **Save.** Tap **SAVE** to keep your changes. Saved combos show up in Combo Practice and in the library, ready to grade against.
 
+## How combo grading works
+
+Combo Practice grades you the way the game would, not against a metronome.
+
+**Your timing is measured against your own hands.** Each input's window rides on your previous press. Roll the motion at your pace and time the button to your motion — that gap is what gets graded, with PERFECT / GREAT / GOOD tiers from each input's timing window (most bundled combos use windows measured from the real game).
+
+**Motions are game-strict.** A special's arrows have to actually happen, in order, before the button counts:
+
+- Rolling through a diagonal covers its neighbors — a clean down-forward roll satisfies the down and the forward steps.
+- Down then forward with **no diagonal** fails the down-forward step, just like in-game.
+- **Holding** a direction counts for the first step — holding crouch into a crouching attack is a real crouch. Holding one diagonal never shortcuts a whole motion; the rest of the arrows need real presses.
+- A standing button when the combo starts crouching fails the crouch.
+
+**The miss lands on what you actually missed.** If an arrow never happens, that arrow goes red at the line the moment its window passes. If you press the button but the motion wasn't complete, the move doesn't come out: the first missing arrow takes the miss, the correct direction lights up on the pad diagram, and the results list says which arrow dropped the motion. Arrows never cost score by themselves — the dropped attack carries the points.
+
+**The replay shows your hands.** After a failed run, the replay slows into each miss and draws the inputs you *actually pressed* as ghost markers at their true times, right next to the chart — so you can see a wrong arrow or an early button instead of guessing.
+
+**Practicing a drop** loops just the move you missed. Until your first press, the rep waits for you — hesitating at the count-in doesn't fail anything. Drop it and it restarts in under a second; land it clean three times and the move locks in. If it ever parks on "ready", press anything to re-arm.
+
+A few extras working in your favor: a real dragon-punch motion performed game-true always counts even if the chart spells it differently; simultaneous inputs (like forward + attack) grade as one moment so Bluetooth packet order can't split them; and if your device drops frames during a run, the app annotates the run instead of blaming your hands.
+
 ## Privacy
 
 Controller Tester collects nothing. No analytics, no telemetry, no remote calls. Input data lives in memory only while the app is open, then it's gone. Full [Privacy Policy](./PRIVACY_POLICY).
