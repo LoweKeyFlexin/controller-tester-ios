@@ -99,6 +99,8 @@ Combo Practice grades you the way the game would, not against a metronome.
 
 **The miss lands on what you actually missed.** If an arrow never happens, that arrow goes red at the line the moment its window passes. If you press the button but the motion wasn't complete, the move doesn't come out: the first missing arrow takes the miss, the correct direction lights up on the pad diagram, and the results list says which arrow dropped the motion. Arrows never cost score by themselves — the dropped attack carries the points.
 
+**Misses are shown and felt, not squawked.** Hits play the punch sound; a miss deliberately plays no sound — you see the red note at the line, feel the miss haptic, and hear the *silence* where your hit should have landed. That's how most rhythm games do it, and it keeps a rough practice session from turning into a wall of error noises.
+
 **The replay shows your hands.** After a failed run, the replay slows into each miss and draws the inputs you *actually pressed* as ghost markers at their true times, right next to the chart — so you can see a wrong arrow or an early button instead of guessing.
 
 **Practicing a drop** loops just the move you missed. Until your first press, the rep waits for you — hesitating at the count-in doesn't fail anything. Drop it and it restarts in under a second; land it clean three times and the move locks in. If it ever parks on "ready", press anything to re-arm.
