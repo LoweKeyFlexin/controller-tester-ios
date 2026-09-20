@@ -10,7 +10,7 @@ This Privacy Policy describes how Controller Tester handles user information and
 
 Controller Tester is offline by default. With one exception, described below, it does not collect, store, share, or transmit any personal information, and nothing it reads from your controllers leaves your device.
 
-The exception is **Share CT**, an optional global reaction-time leaderboard. It is **off unless you turn it on** and shows you what it sends before the first byte leaves your phone. You can also report a player for review or block that player's entries on your device. You can erase your server-held scores, player record, and reports associated with you. The only request the app may make after you turn Share CT off is a retry of an erasure you already requested.
+The exception is **Share CT**, an optional global reaction-time leaderboard. It is **off unless you turn it on** and shows you what it sends before the first byte leaves your phone. The app also offers controls to report a player for review or block that player's entries on your device. A report request leaves your device only when you choose it; the app says it was sent only when the service accepts it. You can request erasure of your server-held data. The only request the app may make after you turn Share CT off is a retry of an erasure you already requested.
 
 ## What the app does
 
@@ -18,7 +18,7 @@ Controller Tester uses Apple's GameController framework to read live input data 
 
 ## What we collect
 
-With Share CT off, the app sends nothing. Through the app, we do not collect, log, transmit, or store any of the following, whether the leaderboard is on or off:
+Before Share CT is enabled, the app sends nothing. After you turn it off, a previously requested erasure may still retry until confirmed. Through the app, we do not collect, log, transmit, or store any of the following, whether the leaderboard is on or off:
 
 - Your email, phone number, or password
 - Your location
@@ -41,17 +41,17 @@ When it is on, and only then, these are sent:
 - **A random player id made for this installation by the Share CT server**, and a random id for each score so that a retry is never counted twice
 - **Your display name**, which you choose, and which may be blank
 - **The app version, the platform** (iOS, Mac, Windows, or Android) **and the device model**
-- **If you choose Report**, the reported player's public player reference and the reason you select: spam, harassment, or inappropriate
+- **If you choose Report on an eligible row**, the reported player's public player reference and the reason you select: spam, harassment, or inappropriate. The app may send this request even if the server cannot accept it; the app then shows failure.
 
-That is the complete list sent by the app. Your display name, scores, controller name, a short player-id suffix, and an opaque public player reference are available through the board. The public reference is used to block or report a player; it is separate from the private credential that authorizes your requests. The player id is random and is not derived from your device, Apple ID, or advertising identifier. The app does not ask for your email address or create an email account.
+That is the complete list sent by the app. Your display name, scores, controller name, and a short player-id suffix are available through the board. When the service provides an opaque public player reference, that reference is also available and is used to block or report a player. It is separate from the private credential that authorizes your requests. The player id is random and is not derived from your device, Apple ID, or advertising identifier. The app does not ask for your email address or create an email account.
 
-**Reports and blocks.** Report is available only after you turn Share CT on. The server accepts a report into a private review queue before the app says it was sent. A report records the reporter, reported player, selected reason, submission time, and review state. It is not public, and sending it does not automatically remove anyone. The developer reviews reports and decides whether to dismiss them or act on the reported player's public entries. The server sends a private email alert to the review owner with a report ID and a link to the authenticated review screen; the player details and reason are read from the review record, not included in the alert. The recipient address is private and configured on the server. A failed email delivery leaves the accepted report in the queue for retry. You can also report offensive board content directly at [lowekeyflexin@gmail.com](mailto:lowekeyflexin@gmail.com).
+**Reports and blocks.** Report requires Share CT to be on and a board row with a public player reference. The app says a report was sent only after the server accepts it. Until the server supports reporting, the control may be unavailable or a submission will show failure. If accepted, a report is stored privately with the reporter, reported player, selected reason, submission time, and review state. It is not public, and sending it does not automatically remove anyone. The developer reviews accepted reports and decides whether to dismiss them or act on the reported player's public entries. If private email alerts are enabled, an alert to the review owner contains a report ID and a link to the authenticated review screen, without player details or the reason. A failed email delivery leaves an accepted report available for review. You can also report offensive board content directly at [lowekeyflexin@gmail.com](mailto:lowekeyflexin@gmail.com).
 
 Block saves a player's public reference and display name on your device to hide that player's entries from your view of the board. You can undo a block in the app. Blocking does not send a request to the server and does not change ranks or what others see.
 
 **Where it goes.** The leaderboard is a small server run on the developer's behalf by a volunteer, on their own hardware and home internet connection. It is not a commercial hosting provider and it is not covered by a service agreement. It is a beta, it may be unavailable at times, and the app says so wherever the board appears.
 
-**Deleting what you have sent.** The app has a control in its leaderboard settings that erases your scores and player record from the live server. The server also removes reports, review records, and unsent email alerts associated with you, whether you submitted a report or someone reported you. The app discards runs still waiting to be sent and retries the erasure until the server confirms it if the server is initially unreachable. A private alert email already delivered to the review owner may remain in that mailbox after server erasure; it contains only a report ID and review link, without a name, player reference, or reason. Contact us at the address below to ask about a delivered alert.
+**Deleting what you have sent.** The app has a control in its leaderboard settings that erases your scores and player record from the live server. If the server has accepted reports involving you, deletion also removes their live report and review records and pending alerts. The app discards runs still waiting to be sent and retries the erasure until the server confirms it if the server is initially unreachable. A private alert email already delivered to the review owner may remain in that mailbox after server erasure; it contains only a report ID and review link, without a name, player reference, or reason. Contact us at the address below to ask about a delivered alert.
 
 **Backups.** The server is backed up nightly and backups are kept for fourteen days. A deletion takes effect on the live leaderboard and private review queue when confirmed; a copy may persist in a backup until those backups age out.
 
@@ -63,9 +63,9 @@ If you turn Share CT on, these parties are involved in delivering it:
 
 - **The volunteer who operates the leaderboard server**, described above.
 - **Cloudflare**, whose network carries requests to that server. As part of that, Cloudflare passes the server the IP address your request came from. The server uses it only to rate-limit abuse, holds it in memory, and **never writes it to its database or stores it alongside your scores.**
-- **Private email delivery**, used only to alert the review owner after the server accepts a report. The alert contains a report ID and authenticated review link, not the reporter's email address or player details.
+- **Private email delivery, when enabled**, used only to alert the review owner after the server accepts a report. The alert contains a report ID and authenticated review link, not the reporter's email address or player details.
 
-These services are involved only when Share CT has been enabled or the app is finishing a previously requested erasure.
+The volunteer and Cloudflare handle Share CT requests only after it has been enabled or while the app finishes a previously requested erasure. A private email alert, if enabled, may be delivered after you turn Share CT off for a report the server accepted earlier.
 
 ## Network use
 
@@ -79,19 +79,19 @@ The app requests Bluetooth permission only so that iOS can expose connected wire
 
 ## Children
 
-The app is suitable for all ages and contains no advertising. With Share CT off, no data is collected from anyone, children included.
+The app contains no advertising. Before Share CT has ever been enabled, no player data is sent to the server. Turning it off later stops new board requests and score submissions but does not erase data already sent; use the erasure control for that.
 
 Share CT is off unless it is deliberately turned on. If it is turned on, a chosen display name and reaction scores become publicly visible on the leaderboard. Choose a display name that does not identify you. A parent or guardian can turn the feature off and erase everything it has sent using the control described above.
 
 ## Your rights under GDPR, CCPA, and similar laws
 
-**With Share CT off**, Controller Tester collects no personal data at all, so there is nothing to access, correct, delete, port, or restrict.
+**If Share CT has never been enabled**, the app has sent no player data to the server. If you used it and then turned it off, previously sent data remains until you request deletion.
 
-**With Share CT on**, the data listed above is held, and your rights apply to it:
+**If you have used Share CT**, the data listed above may be held, and your rights apply to it:
 
 - **Access** — your scores and name appear on the board, but accepted reports and review records are private. Contact us at the address below for questions about those records.
 - **Correction** — you can change your display name in the app at any time.
-- **Deletion** — the erase control removes your scores, player record, and associated reports from the live server, subject to the backup and delivered-email limits described above.
+- **Deletion** — the erase control removes your scores and player record, plus any accepted reports associated with you, from the live server, subject to the backup and delivered-email limits described above.
 - **Portability** — public leaderboard data is served as plain JSON from the same public address as the board. Contact us for questions about private report records.
 - **Objection and withdrawal of consent** — turn Share CT off. Board requests and score submissions stop immediately; a previously requested erasure may still retry until confirmed.
 
