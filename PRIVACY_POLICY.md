@@ -2,9 +2,9 @@
 
 **Controller Tester**
 Developer: Aaron Lowe
-Last updated: September 19, 2026
+Last updated: September 29, 2026
 
-This Privacy Policy describes how Controller Tester handles user information and your privacy rights when you use the app on iOS or iPadOS.
+This Privacy Policy describes how Controller Tester handles user information and your privacy rights when you use the app on iOS, iPadOS or macOS (Controller Tester for Mac).
 
 ## Summary
 
@@ -14,7 +14,7 @@ The exception is **Share CT**, an optional global reaction-time leaderboard. It 
 
 ## What the app does
 
-Controller Tester uses Apple's GameController framework to read live input data from any game controller you connect to your iOS device, whether wired or via Bluetooth. It displays this data on your screen in real time so you can verify that buttons, sticks, triggers, and the directional pad are reporting correctly. All input data is held in memory only for as long as the app is open, and is discarded when you close the app.
+Controller Tester uses Apple's GameController framework to read live input data from any game controller you connect to your iPhone, iPad or Mac, whether wired or via Bluetooth. On a Mac it can also read your keyboard, when you choose it as the input to test. It displays this data on your screen in real time so you can verify that buttons, sticks, triggers, and the directional pad are reporting correctly. All input data is held in memory only for as long as the app is open, and is discarded when you close the app.
 
 ## What we collect
 
@@ -69,13 +69,17 @@ The volunteer and Cloudflare handle Share CT requests only after it has been ena
 
 ## Network use
 
-**Before you enable Share CT, the app makes no network requests at all.** It does not connect to any servers, ours or anyone else's. You can verify this by enabling Airplane Mode and using the app normally: every feature except the leaderboard works unchanged. Turning Share CT off stops board requests and score submissions; a previously requested erasure can still retry until confirmed.
+**Before you enable Share CT, the app makes no network requests at all.** It does not connect to any servers, ours or anyone else's. You can verify this by enabling Airplane Mode (or turning off Wi-Fi on a Mac) and using the app normally: every feature except the leaderboard works unchanged. Turning Share CT off stops board requests and score submissions; a previously requested erasure can still retry until confirmed.
 
 With Share CT on, the app contacts only the leaderboard server described above, and only to register a player, send a finished trial, read the board, rename you, submit a report you choose, or erase your data at your request. The server, not the app, sends private review alerts.
 
 ## Bluetooth
 
-The app requests Bluetooth permission only so that iOS can expose connected wireless game controllers to it through Apple's GameController framework. The app does not scan for, connect to, or communicate with any other Bluetooth devices. Bluetooth pairing of controllers is handled by iOS itself, not by this app.
+The app requests Bluetooth permission only so that iOS or macOS can expose connected wireless game controllers to it through Apple's GameController framework. The app does not scan for, connect to, or communicate with any other Bluetooth devices. Bluetooth pairing of controllers is handled by the operating system itself, not by this app.
+
+## Camera and photos
+
+If you choose to photograph a controller, or pick a photo, to build a custom controller layout, the app uses that image only on your device to draw the layout. It is never uploaded, is not part of Share CT, and the app does not access your camera or photo library unless you start one of those actions. On a Mac, if you choose a folder for the app to import recordings from, the app reads only that folder, and only on your device.
 
 ## Children
 
