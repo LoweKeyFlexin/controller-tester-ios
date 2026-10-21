@@ -2,7 +2,7 @@
 
 **Controller Tester**
 Developer: Aaron Lowe
-Last updated: October 19, 2026
+Last updated: October 21, 2026
 
 This Privacy Policy describes how Controller Tester handles user information and your privacy rights when you use the app on iOS, iPadOS or macOS (Controller Tester for Mac).
 
@@ -10,7 +10,7 @@ This Privacy Policy describes how Controller Tester handles user information and
 
 Controller Tester is offline by default. With one exception, described below, it does not collect, store, share, or transmit any personal information, and nothing it reads from your controllers leaves your device.
 
-The exception is **Share CT**, optional global Reaction and Endless Drills leaderboards. It is **off unless you turn it on** and shows you what it sends before the first byte leaves your phone. The app also offers controls to report a player for review or block that player's entries on your device. A report request leaves your device only when you choose it; the app says it was sent only when the service accepts it. You can request erasure of your server-held data. The only request the app may make after you turn Share CT off is a retry of an erasure you already requested.
+The exception is **Share CT**, optional global Reaction, Endless and Arcade Drills leaderboards. It is **off unless you turn it on** and shows you what it sends before the first byte leaves your phone. The app also offers controls to report a player for review or block that player's entries on your device. A report request leaves your device only when you choose it; the app says it was sent only when the service accepts it. You can request erasure of your server-held data. The only request the app may make after you turn Share CT off is a retry of an erasure you already requested.
 
 ## What the app does
 
@@ -32,12 +32,12 @@ There is no account to create and no sign-in anywhere in the app.
 
 ## Share CT, the optional leaderboard
 
-Share CT publishes Reaction trial scores and per-drill Endless high scores and Recent Scores to leaderboards that anyone can view on the web. It is **opt-in**. Before it sends anything, the app shows you a sheet listing every item below; if that list ever changes, the sheet is shown again and you are asked again.
+Share CT publishes Reaction trial scores and separate per-drill Endless and Arcade rankings and Recent Scores to leaderboards that anyone can view on the web. It is **opt-in**. Before it sends anything, the app shows you a sheet listing every item below; if that list ever changes, the sheet is shown again and you are asked again.
 
 When it is on, and only then, these are sent:
 
 - **Every Reaction trial you finish while it is on**: your best time, your average, accuracy, score, the three individual attempt times, any misfires, and whether you used touch, a controller, or a keyboard
-- **Every Endless Drills run you finish while it is on**: which drill, your successful active reactions as points (correct non-actions earn no points), three lost lives, and whether you used touch, a controller, or a keyboard
+- **Every Endless or Arcade Drills run you finish after accepting the current agreement while it is on**: which drill and mode, points, lost lives, and whether you used touch, a controller, or a keyboard. Arcade also sends successful hits, whole enemies defeated and total opponents, whether you cleared the run, elapsed milliseconds, and perfect opponents. Endless points count successful active reactions; correct non-actions earn no points
 - **Which controller you used, by name** — or "Touch"
 - **A random player id made for this installation by the Share CT server**, and a random id for each score so that a retry is never counted twice
 - **Your display name**, which you choose, and which may be blank
@@ -47,7 +47,11 @@ When it is on, and only then, these are sent:
 
 That is the complete list sent by the app. Your display name, avatar, scores, controller name, and a short player-id suffix are available through the board. When the service provides an opaque public player reference, that reference is also available and is used to block or report a player. It is separate from the private credential that authorizes your requests. Recent Drills rows also have an opaque public reference distinguishing each run; it does not expose your private player id or token. The player id is random and is not derived from your device, Apple ID, or advertising identifier. The app does not ask for your email address or create an email account.
 
-**Endless Drills.** Each drill has its own all-time high-score board at 100% speed with three lives. All input devices compete on that drill's same board; device and platform are displayed as information, not separate rankings. Existing Share CT players must accept the expanded agreement before any Endless score submission or global drill-board request. Earlier local Endless runs are not uploaded merely because you enroll. After you accept the updated Recent Scores agreement, newly completed Endless runs are submitted automatically and appear in that drill's public Recent Scores feed, including runs below your best and zero-point runs. The server retains the latest 200 accepted runs per player across all drills for up to 90 days, whichever limit is reached first, plus a separate all-time best per player per drill and at most 100 recent retry receipts per player. No per-reaction input traces are retained. The offline queue holds up to 200 completed runs, dropping the oldest if full. Older app versions and runs already queued under the earlier best-only agreement keep that scope and are not added to Recent Scores. Earlier local history is not uploaded when you accept the new agreement. Run entries expire after 90 days: expired entries are excluded from Recent Scores and deleted when the service starts, when new submissions or Recent reads occur, and during hourly cleanup while the service is running. Progress can keep your last observed global standing on this device, with the time it was checked, so it can show that historical rank while offline.
+**Endless and Arcade Drills.** Each drill has separate Endless and Arcade rankings. Endless counts successful active reactions at 100% speed with three lives. Arcade ranks completed runs above partial runs, clears by time then points, and partial runs by whole enemies defeated then points and time. Arcade points are successful hits plus 5 per perfect opponent, 10 per three defeated enemies, and a clear-only time bonus of up to 300 points. Ranking points are separate from CT currency. All input devices compete on the same board for that drill and mode; device and platform are displayed as information, not separate rankings.
+
+Existing Share CT players must accept the expanded agreement before any Endless or Arcade score submission or global drill-board request. After acceptance, newly finished runs are submitted automatically and appear in that drill and mode's public Recent Scores feed, including runs below your best and zero-point runs. Earlier local history is not uploaded when you accept the agreement or enroll. Older app versions and runs already queued under the earlier best-only agreement keep that scope and are not added to Recent Scores.
+
+The server retains the latest 200 accepted runs per player across all drills and both modes for up to 90 days, whichever limit is reached first, plus a separate all-time best per player per drill and mode and at most 100 recent retry receipts per player in each mode. No per-reaction input traces are retained. The offline queue holds up to 200 finished runs, dropping the oldest if full. Expired runs are excluded from Recent Scores and deleted when the service starts, when new submissions or Recent reads occur, and during hourly cleanup. Progress can keep your last observed global standing on this device, with the time it was checked, so it can show that historical rank while offline.
 
 **Avatar.** The avatar is a short description made only of ids: which fighter, which outfit, a color number or a limited bonus look (such as EX01), and any gear (for example `1:puppet-ronin:1:6:pirate-hat`, about 30 bytes). No picture is ever uploaded; each phone draws the headshot from art the app already includes, and the Share CT website draws the same headshot on its board. The avatar is simply the look you had the last time you used Share CT: the app sends it when you open the leaderboard, and only when it has changed. Nothing is sent while Share CT is off. The server keeps one avatar per player, so it appears on all of your rows, and deleting what you have sent erases it too. It shows what you chose to wear, which can include items bought with the app's CT points or earned in the app.
 
@@ -76,7 +80,7 @@ The volunteer and Cloudflare handle Share CT requests only after it has been ena
 
 **Before you enable Share CT, the app makes no network requests at all.** It does not connect to any servers, ours or anyone else's. You can verify this by enabling Airplane Mode (or turning off Wi-Fi on a Mac) and using the app normally: every feature except the leaderboard works unchanged. Turning Share CT off stops board requests and score submissions; a previously requested erasure can still retry until confirmed.
 
-With Share CT on, the app contacts only the leaderboard server described above, and only to register a player, send a finished Reaction trial or Endless run, read the board, rename you, submit a report you choose, or erase your data at your request.
+With Share CT on, the app contacts only the leaderboard server described above, and only to register a player, send a finished Reaction trial, Endless run or Arcade run, read the board, rename you, submit a report you choose, or erase your data at your request.
 
 ## Bluetooth
 
@@ -90,7 +94,7 @@ If you choose to photograph a controller, or pick a photo, to build a custom con
 
 The app contains no advertising. Before Share CT has ever been enabled, no player data is sent to the server. Turning it off later stops new board requests and score submissions but does not erase data already sent; use the erasure control for that.
 
-Share CT is off unless it is deliberately turned on. If it is turned on, a chosen display name and Reaction or Endless scores become publicly visible on the leaderboard. Choose a display name that does not identify you. A parent or guardian can turn the feature off and erase everything it has sent using the control described above.
+Share CT is off unless it is deliberately turned on. If it is turned on, a chosen display name and Reaction, Endless or Arcade scores become publicly visible on the leaderboard. Choose a display name that does not identify you. A parent or guardian can turn the feature off and erase everything it has sent using the control described above.
 
 ## Your rights under GDPR, CCPA, and similar laws
 
