@@ -2,7 +2,7 @@
 
 **Controller Tester**
 Developer: Aaron Lowe
-Last updated: October 21, 2026
+Last updated: October 31, 2026
 
 This Privacy Policy describes how Controller Tester handles user information and your privacy rights when you use the app on iOS, iPadOS or macOS (Controller Tester for Mac).
 
@@ -32,12 +32,12 @@ There is no account to create and no sign-in anywhere in the app.
 
 ## Share CT, the optional leaderboard
 
-Share CT publishes Reaction trial scores and separate per-drill Endless and Arcade rankings and Recent Scores to leaderboards that anyone can view on the web. It is **opt-in**. Before it sends anything, the app shows you a sheet listing every item below; if that list ever changes, the sheet is shown again and you are asked again.
+Share CT publishes Reaction trial scores and separate per-drill Endless and Arcade rankings and Recent Scores to leaderboards that anyone can view on the web. It is **opt-in**. New players see a sheet listing every item below before enabling sharing. Existing players with an accepted Share CT agreement are grandfathered into the current combined Reaction and Drills agreement. Future changes to the disclosed data require review.
 
 When it is on, and only then, these are sent:
 
 - **Every Reaction trial you finish while it is on**: your best time, your average, accuracy, score, the three individual attempt times, any misfires, and whether you used touch, a controller, or a keyboard
-- **Every Endless or Arcade Drills run you finish after accepting the current agreement while it is on**: which drill and mode, points, lost lives, and whether you used touch, a controller, or a keyboard. Arcade also sends successful hits, whole enemies defeated and total opponents, whether you cleared the run, elapsed milliseconds, and perfect opponents. Endless points count successful active reactions; correct non-actions earn no points
+- **Every Endless or Arcade Drills run you finish with a current or grandfathered agreement while it is on**: which drill and mode, points, lost lives, and whether you used touch, a controller, or a keyboard. Arcade also sends successful hits, whole enemies defeated and total opponents, whether you cleared the run, elapsed milliseconds, and perfect opponents. Endless points count successful active reactions; correct non-actions earn no points
 - **Which controller you used, by name** — or "Touch"
 - **A random player id made for this installation by the Share CT server**, and a random id for each score so that a retry is never counted twice
 - **Your display name**, which you choose, and which may be blank
@@ -49,7 +49,7 @@ That is the complete list sent by the app. Your display name, avatar, scores, co
 
 **Endless and Arcade Drills.** Each drill has separate Endless and Arcade rankings. Endless counts successful active reactions at 100% speed with three lives. Arcade ranks completed runs above partial runs, clears by time then points, and partial runs by whole enemies defeated then points and time. Arcade points are successful hits plus 5 per perfect opponent, 10 per three defeated enemies, and a clear-only time bonus of up to 300 points. Ranking points are separate from CT currency. All input devices compete on the same board for that drill and mode; device and platform are displayed as information, not separate rankings.
 
-Existing Share CT players must accept the expanded agreement before any Endless or Arcade score submission or global drill-board request. After acceptance, newly finished runs are submitted automatically and appear in that drill and mode's public Recent Scores feed, including runs below your best and zero-point runs. Earlier local history is not uploaded when you accept the agreement or enroll. Older app versions and runs already queued under the earlier best-only agreement keep that scope and are not added to Recent Scores.
+One Share CT agreement covers Reaction, Endless Drills and Arcade Drills. Existing players who accepted a previous Share CT agreement do not need to accept again for Drills. Their sharing preference remains unchanged: sharing stays off if they turned it off. New players accept the combined agreement once before enabling sharing. With sharing on and a current or grandfathered agreement, newly finished runs are submitted automatically and appear in that drill and mode's public Recent Scores feed, including runs below your best and zero-point runs. Earlier local history is not uploaded when you accept the agreement or enroll. Older app versions and runs already queued under the earlier best-only agreement keep that scope and are not added to Recent Scores.
 
 The server retains the latest 200 accepted runs per player across all drills and both modes for up to 90 days, whichever limit is reached first, plus a separate all-time best per player per drill and mode and at most 100 recent retry receipts per player in each mode. No per-reaction input traces are retained. The offline queue holds up to 200 finished runs, dropping the oldest if full. Expired runs are excluded from Recent Scores and deleted when the service starts, when new submissions or Recent reads occur, and during hourly cleanup. Progress can keep your last observed global standing on this device, with the time it was checked, so it can show that historical rank while offline.
 
