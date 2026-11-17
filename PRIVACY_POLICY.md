@@ -2,9 +2,9 @@
 
 **Controller Tester**
 Developer: Aaron Lowe
-Last updated: October 21, 2026
+Last updated: November 17, 2026
 
-This Privacy Policy describes how Controller Tester handles user information and your privacy rights when you use the app on iOS, iPadOS or macOS (Controller Tester for Mac).
+This Privacy Policy describes how Controller Tester handles user information and your privacy rights when you use the app on iOS, iPadOS or macOS (Controller Tester for Mac), or on Android (Fighter CT on Google Play).
 
 ## Summary
 
@@ -15,6 +15,8 @@ The exception is **Share CT**, optional global Reaction, Endless and Arcade Dril
 ## What the app does
 
 Controller Tester uses Apple's GameController framework to read live input data from any game controller you connect to your iPhone, iPad or Mac, whether wired or via Bluetooth. On a Mac it can also read your keyboard, when you choose it as the input to test. It displays this data on your screen in real time so you can verify that buttons, sticks, triggers, and the directional pad are reporting correctly. All input data is held in memory only for as long as the app is open, and is discarded when you close the app.
+
+On Android, the app reads controller input through Android's standard input system: the key and motion events Android delivers for connected gamepads, arcade sticks, keyboards and the touch screen. Pairing a controller is done in Android's own settings, not by the app. As on Apple devices, input data is held in memory only while the app is open.
 
 ## What we collect
 
@@ -53,7 +55,7 @@ Existing Share CT players must accept the expanded agreement before any Endless 
 
 The server retains the latest 200 accepted runs per player across all drills and both modes for up to 90 days, whichever limit is reached first, plus a separate all-time best per player per drill and mode and at most 100 recent retry receipts per player in each mode. No per-reaction input traces are retained. The offline queue holds up to 200 finished runs, dropping the oldest if full. Expired runs are excluded from Recent Scores and deleted when the service starts, when new submissions or Recent reads occur, and during hourly cleanup. Progress can keep your last observed global standing on this device, with the time it was checked, so it can show that historical rank while offline.
 
-**Avatar.** The avatar is a short description made only of ids: which fighter, which outfit, a color number or a limited bonus look (such as EX01), and any gear (for example `1:puppet-ronin:1:6:pirate-hat`, about 30 bytes). No picture is ever uploaded; each phone draws the headshot from art the app already includes, and the Share CT website draws the same headshot on its board. The avatar is simply the look you had the last time you used Share CT: the app sends it when you open the leaderboard, and only when it has changed. Nothing is sent while Share CT is off. The server keeps one avatar per player, so it appears on all of your rows, and deleting what you have sent erases it too. It shows what you chose to wear, which can include items bought with the app's CT points or earned in the app.
+**Avatar.** The avatar is a short description made only of ids: which fighter, which outfit, a color number or a limited bonus look (such as EX01), and any gear (for example `1:puppet-ronin:1:6:pirate-hat`, about 30 bytes). No picture is ever uploaded; each phone draws the headshot from art the app already includes, and the Share CT website draws the same headshot on its board. The avatar is simply the look you had the last time you used Share CT: the app sends it when you open the leaderboard, and only when it has changed. Nothing is sent while Share CT is off. The server keeps one avatar per player, so it appears on all of your rows, and deleting what you have sent erases it too. It shows what you chose to wear, which can include items bought with the app's CT points or earned in the app. The Android app does not send an avatar at present; Android rows show the default headshot.
 
 **Reports and blocks.** Report requires Share CT to be on and a board row with a public player reference. The app says a report was sent only after the server accepts it. Until the server supports reporting, the control may be unavailable or a submission will show failure. If accepted, a report is stored privately with the reporter, reported player, selected reason, submission time, and review state. It is not public, and sending it does not automatically remove anyone. The developer reviews accepted reports and decides whether to dismiss them or act on the reported player's public entries. Accepted reports remain in the private review list; no email alert or message about a report is sent anywhere. You can also report offensive board content directly at [lowekeyflexin@gmail.com](mailto:lowekeyflexin@gmail.com).
 
@@ -61,7 +63,7 @@ Block saves a player's public reference and display name on your device to hide 
 
 **Where it goes.** The leaderboard is a small server run on the developer's behalf by a volunteer, on their own hardware and home internet connection. It is not a commercial hosting provider and it is not covered by a service agreement. It is a beta, it may be unavailable at times, and the app says so wherever the board appears.
 
-**Deleting what you have sent.** The app has a control in its leaderboard settings that erases your scores and player record from the live server. Deletion includes your all-time bests, retained Recent Scores runs, and retry receipts. If the server has accepted reports involving you, deletion also removes their live report and review records. The app discards runs still waiting to be sent and retries the erasure until the server confirms it if the server is initially unreachable.
+**Deleting what you have sent.** The app has a control in its leaderboard settings that erases your scores and player record from the live server. If you no longer have the app, see [Delete your Share CT data](DELETE_MY_DATA) for how to ask without it. Deletion includes your all-time bests, retained Recent Scores runs, and retry receipts. If the server has accepted reports involving you, deletion also removes their live report and review records. The app discards runs still waiting to be sent and retries the erasure until the server confirms it if the server is initially unreachable.
 
 **Backups.** The server is backed up nightly and backups are kept for fourteen days. A deletion takes effect on the live leaderboard and private review queue when confirmed; a copy may persist in a backup until those backups age out. Expired Recent Scores entries may likewise remain in a backup until it ages out.
 
@@ -84,7 +86,24 @@ With Share CT on, the app contacts only the leaderboard server described above, 
 
 ## Bluetooth
 
-The app requests Bluetooth permission only so that iOS or macOS can expose connected wireless game controllers to it through Apple's GameController framework. The app does not scan for, connect to, or communicate with any other Bluetooth devices. Bluetooth pairing of controllers is handled by the operating system itself, not by this app.
+The app requests Bluetooth permission only so that iOS or macOS can expose connected wireless game controllers to it through Apple's GameController framework. The app does not scan for, connect to, or communicate with any other Bluetooth devices. Bluetooth pairing of controllers is handled by the operating system itself, not by this app. The Android app requests no Bluetooth permission at all: Android delivers paired controllers to it as ordinary input.
+
+## Android permissions
+
+The Android app requests only:
+
+- **Internet**, used only by Share CT, and only after you turn it on (plus a retry of an erasure you already requested). Android also lets the app check whether a network is available, without reading anything about it.
+- **Vibrate**, for haptic feedback on the phone itself while you practise on the touch screen.
+
+It does not request location, contacts, camera, microphone, storage, Bluetooth or notification permissions. Opening a shared controller-layout file (`.ctdevice`) reads only the file you chose to open with the app.
+
+## Bug reports you choose to send
+
+On Android, shaking the device or using the report control in Settings prepares a screenshot of the current screen and a short text note: the app version, device model, Android version, the active controller, theme and skin, the app's recent event and crash log, and the timings of your last 40 Reaction-test presses. It then opens Android's share sheet, and you can edit the note before sending. Nothing is sent unless you pick an app to send it with, and it goes only where you send it, for example an email to the developer.
+
+## Backups on Android
+
+The Android app's data on your phone (settings, progress, CT and cosmetics, and your Share CT player credential if you use Share CT) can be included in your own Google device backup and device-to-device transfer, as Android allows by default. The developer cannot read that backup.
 
 ## Camera and photos
 
