@@ -4,7 +4,7 @@
 Developer: Aaron Lowe
 Last updated: November 17, 2026
 
-This Privacy Policy describes how Controller Tester handles user information and your privacy rights when you use the app on iOS, iPadOS or macOS (Controller Tester for Mac), or on Android (Fighter CT on Google Play).
+This Privacy Policy describes how Controller Tester handles user information and your privacy rights when you use the app on iOS, iPadOS or macOS (Controller Tester for Mac), on Android (Fighter CT on Google Play), or on Windows and Linux, including Steam Deck (Fighter CT for desktop).
 
 ## Summary
 
@@ -17,6 +17,8 @@ The exception is **Share CT**, optional global Reaction, Endless and Arcade Dril
 Controller Tester uses Apple's GameController framework to read live input data from any game controller you connect to your iPhone, iPad or Mac, whether wired or via Bluetooth. On a Mac it can also read your keyboard, when you choose it as the input to test. It displays this data on your screen in real time so you can verify that buttons, sticks, triggers, and the directional pad are reporting correctly. All input data is held in memory only for as long as the app is open, and is discarded when you close the app.
 
 On Android, the app reads controller input through Android's standard input system: the key and motion events Android delivers for connected gamepads, arcade sticks, keyboards and the touch screen. Pairing a controller is done in Android's own settings, not by the app. As on Apple devices, input data is held in memory only while the app is open.
+
+On Windows and Linux, including Steam Deck, the app reads controller input through SDL, the open-source input library Steam also uses: the button, stick and trigger events the operating system delivers for connected gamepads, arcade sticks and keyboards. Pairing a controller is done in the operating system's (or Steam's) settings, not by the app. Input data is held in memory only while the app is open. The app keeps its settings, progress and personal bests in a file in your user profile on that computer; it is not uploaded.
 
 ## What we collect
 
@@ -44,7 +46,7 @@ When it is on, and only then, these are sent:
 - **A random player id made for this installation by the Share CT server**, and a random id for each score so that a retry is never counted twice
 - **Your display name**, which you choose, and which may be blank
 - **Your avatar**: which fighter, outfit, color and gear you picked. It's a short description, never a picture, and other players see it next to your name
-- **The app version, the platform** (iOS, Mac, Windows, or Android) **and the device model**
+- **The app version, the platform** (iOS, Mac, Windows, Linux, or Android) **and the device model**
 - **If you choose Report on an eligible row**, the reported player's public player reference and the reason you select: spam, harassment, or inappropriate. The app may send this request even if the server cannot accept it; the app then shows failure.
 
 That is the complete list sent by the app. Your display name, avatar, scores, controller name, and a short player-id suffix are available through the board. When the service provides an opaque public player reference, that reference is also available and is used to block or report a player. It is separate from the private credential that authorizes your requests. Recent Drills rows also have an opaque public reference distinguishing each run; it does not expose your private player id or token. The player id is random and is not derived from your device, Apple ID, or advertising identifier. The app does not ask for your email address or create an email account.
@@ -86,7 +88,7 @@ With Share CT on, the app contacts only the leaderboard server described above, 
 
 ## Bluetooth
 
-The app requests Bluetooth permission only so that iOS or macOS can expose connected wireless game controllers to it through Apple's GameController framework. The app does not scan for, connect to, or communicate with any other Bluetooth devices. Bluetooth pairing of controllers is handled by the operating system itself, not by this app. The Android app requests no Bluetooth permission at all: Android delivers paired controllers to it as ordinary input.
+The app requests Bluetooth permission only so that iOS or macOS can expose connected wireless game controllers to it through Apple's GameController framework. The app does not scan for, connect to, or communicate with any other Bluetooth devices. Bluetooth pairing of controllers is handled by the operating system itself, not by this app. The Android app requests no Bluetooth permission at all: Android delivers paired controllers to it as ordinary input. The Windows and Linux app requests none either: the operating system delivers paired controllers to it.
 
 ## Android permissions
 
