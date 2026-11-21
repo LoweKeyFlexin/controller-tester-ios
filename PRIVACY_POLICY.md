@@ -2,7 +2,7 @@
 
 **Controller Tester**
 Developer: Aaron Lowe
-Last updated: November 17, 2026
+Last updated: November 21, 2026
 
 This Privacy Policy describes how Controller Tester handles user information and your privacy rights when you use the app on iOS, iPadOS or macOS (Controller Tester for Mac), on Android (Fighter CT on Google Play), or on Windows and Linux, including Steam Deck (Fighter CT for desktop).
 
@@ -57,7 +57,7 @@ Existing Share CT players must accept the expanded agreement before any Endless 
 
 The server retains the latest 200 accepted runs per player across all drills and both modes for up to 90 days, whichever limit is reached first, plus a separate all-time best per player per drill and mode and at most 100 recent retry receipts per player in each mode. No per-reaction input traces are retained. The offline queue holds up to 200 finished runs, dropping the oldest if full. Expired runs are excluded from Recent Scores and deleted when the service starts, when new submissions or Recent reads occur, and during hourly cleanup. Progress can keep your last observed global standing on this device, with the time it was checked, so it can show that historical rank while offline.
 
-**Avatar.** The avatar is a short description made only of ids: which fighter, which outfit, a color number or a limited bonus look (such as EX01), and any gear (for example `1:puppet-ronin:1:6:pirate-hat`, about 30 bytes). No picture is ever uploaded; each phone draws the headshot from art the app already includes, and the Share CT website draws the same headshot on its board. The avatar is simply the look you had the last time you used Share CT: the app sends it when you open the leaderboard, and only when it has changed. Nothing is sent while Share CT is off. The server keeps one avatar per player, so it appears on all of your rows, and deleting what you have sent erases it too. It shows what you chose to wear, which can include items bought with the app's CT points or earned in the app. The Android app does not send an avatar at present; Android rows show the default headshot.
+**Avatar.** The avatar is a short description made only of ids: which fighter, which outfit, a color number or a limited bonus look (such as EX01), and any gear (for example `1:puppet-ronin:1:6:pirate-hat`, about 30 bytes). No picture is ever uploaded; each phone draws the headshot from art the app already includes, and the Share CT website draws the same headshot on its board. The avatar is simply the look you had the last time you used Share CT: the app sends it when you open the leaderboard, and only when it has changed. Nothing is sent while Share CT is off. The server keeps one avatar per player, so it appears on all of your rows, and deleting what you have sent erases it too. It shows what you chose to wear, which can include items bought with the app's CT points or earned in the app.
 
 **Reports and blocks.** Report requires Share CT to be on and a board row with a public player reference. The app says a report was sent only after the server accepts it. Until the server supports reporting, the control may be unavailable or a submission will show failure. If accepted, a report is stored privately with the reporter, reported player, selected reason, submission time, and review state. It is not public, and sending it does not automatically remove anyone. The developer reviews accepted reports and decides whether to dismiss them or act on the reported player's public entries. Accepted reports remain in the private review list; no email alert or message about a report is sent anywhere. You can also report offensive board content directly at [lowekeyflexin@gmail.com](mailto:lowekeyflexin@gmail.com).
 
@@ -101,7 +101,7 @@ It does not request location, contacts, camera, microphone, storage, Bluetooth o
 
 ## Bug reports you choose to send
 
-On Android, shaking the device or using the report control in Settings prepares a screenshot of the current screen and a short text note: the app version, device model, Android version, the active controller, theme and skin, the app's recent event and crash log, and the timings of your last 40 Reaction-test presses. It then opens Android's share sheet, and you can edit the note before sending. Nothing is sent unless you pick an app to send it with, and it goes only where you send it, for example an email to the developer.
+On Android, using the report control in Settings prepares a screenshot of the current screen and a short text note: the app version, device model, Android version, the active controller, theme and skin, the app's recent event and crash log, and the timings of your last 40 Reaction-test presses. It then opens Android's share sheet, and you can edit the note before sending. Nothing is sent unless you pick an app to send it with, and it goes only where you send it, for example an email to the developer.
 
 ## Backups on Android
 
