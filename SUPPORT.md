@@ -62,6 +62,18 @@ That's fine. When a keyboard is connected and no gamepad is, the buttons panel s
 
 Results show in milliseconds and in **frames at 60 fps**, the FGC standard, so the number means the same thing across devices. On ProMotion screens (iPad Pro, iPhone 13 Pro and later) input sampling runs up to 120 Hz. Good for A/B-ing two boards: if one adds 3 frames of latency, you'll see it.
 
+### Reaction Test triggers "TOO SOON" on Android before I touch the screen
+
+Some Android touchscreens have high capacitive sensitivity — occasionally stronger in specific zones of the display or under a screen protector — so hovering a finger very close to the glass while waiting for green can register as a touch before physical contact. Because the app reads standard Android touch-down events directly with no extra filtering (to avoid adding input lag), an early touch from the screen counts as **TOO SOON**.
+
+Things to try:
+
+- **Turn off Touch sensitivity / Screen protector mode.** On Samsung devices, go to **Settings → Display → Touch sensitivity** and switch it off (other Android phones may label this *Increased touch sensitivity*, *Screen protector mode*, or *Glove mode*). Lock and unlock the screen once so the touch controller resets its baseline.
+- **Test while unplugged.** Some USB cables or chargers can introduce electrical noise that makes capacitive panels trigger slightly earlier.
+- **Hover a few millimeters higher, or try another spot on the pad.** Sensitivity can vary across different areas of a touchscreen, so holding your finger slightly farther from the glass — or tapping a different spot on the Reaction pad — usually avoids hot zones.
+- **Watch your grip on the edges.** Make sure the hand holding the phone isn't brushing the edges of the Reaction pad or the virtual buttons below it while you wait for green.
+- **Check where touches are firing (optional).** Android's **Settings → Developer options → Pointer location** draws a crosshair at the exact spot (and pressure reading `Prs`) where the screen registers a press. It's a quick way to confirm whether a hover or an edge brush triggered the early tap — just turn Pointer location back off when you're finished.
+
 ## Using the Combo Editor
 
 Combo Practice plays back a combo as a scrolling note highway and grades your timing against it. The **Combo Editor** is where you build or tune one. Open it from the Combo Practice screen with **Combo Editor**, or from a recording's menu.
