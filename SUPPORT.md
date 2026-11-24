@@ -64,15 +64,15 @@ Results show in milliseconds and in **frames at 60 fps**, the FGC standard, so t
 
 ### Reaction Test triggers "TOO SOON" on Android before I touch the screen
 
-Some Android touchscreens have high capacitive sensitivity — occasionally stronger in specific zones of the display or under a screen protector — so hovering a finger very close to the glass while waiting for green can register as a touch before physical contact. Because the app reads standard Android touch-down events directly with no extra filtering (to avoid adding input lag), an early touch from the screen counts as **TOO SOON**.
+Some Android phones report a touch-down event when a finger hovers very close to the glass — sometimes more easily in specific areas of the display or under a screen protector. Because Fighter CT treats standard Android touch-down events directly as a press with no extra filtering (to avoid adding input lag), an early touch reported by the screen counts as **TOO SOON**.
 
 Things to try:
 
-- **Turn off Touch sensitivity / Screen protector mode.** On Samsung devices, go to **Settings → Display → Touch sensitivity** and switch it off (other Android phones may label this *Increased touch sensitivity*, *Screen protector mode*, or *Glove mode*). Lock and unlock the screen once so the touch controller resets its baseline.
-- **Test while unplugged.** Some USB cables or chargers can introduce electrical noise that makes capacitive panels trigger slightly earlier.
-- **Hover a few millimeters higher, or try another spot on the pad.** Sensitivity can vary across different areas of a touchscreen, so holding your finger slightly farther from the glass — or tapping a different spot on the Reaction pad — usually avoids hot zones.
+- **Turn off Touch sensitivity / Screen protector mode.** On Samsung devices, go to **Settings → Display → Touch sensitivity** and switch it off (other Android phones may label this *Increased touch sensitivity*, *Screen protector mode*, or *Glove mode*).
+- **Compare plugged in vs. unplugged.** Try a quick test while unplugged to see whether the phone reports hover touches any differently on battery vs. on a charger or USB cable.
+- **Hover a few millimeters higher, or try another spot on the pad.** Sensitivity can vary across different areas of a touchscreen, so holding your finger slightly farther from the glass — or tapping a different spot on the Reaction pad — usually avoids more sensitive spots.
 - **Watch your grip on the edges.** Make sure the hand holding the phone isn't brushing the edges of the Reaction pad or the virtual buttons below it while you wait for green.
-- **Check where touches are firing (optional).** Android's **Settings → Developer options → Pointer location** draws a crosshair at the exact spot (and pressure reading `Prs`) where the screen registers a press. It's a quick way to confirm whether a hover or an edge brush triggered the early tap — just turn Pointer location back off when you're finished.
+- **Check where touches are firing (optional).** Android's **Settings → Developer options → Pointer location** draws a crosshair at the exact spot (and pressure reading `Prs`) where the phone reports a touch. It's a quick way to confirm whether hovering or an edge brush triggered the early press — just turn Pointer location back off when you're finished.
 
 ## Using the Combo Editor
 
